@@ -3,7 +3,7 @@ by Yicheng Wu*, Zhonghua Wu, Qianyi Wu, Zongyuan Ge, and Jianfei Cai.
 
 ### News
 ```
-<12.06.2022> We provided our pre-trained models on the LA and ACDC datasets, see './SS-Net/model/';
+<12.06.2022> We provided our pre-trained models on the LA and ACDC datasets, see './SS-Net/pretrained_pth';
 ```
 ```
 <09.06.2022> We released the codes;
