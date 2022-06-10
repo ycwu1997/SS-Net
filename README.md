@@ -31,7 +31,7 @@ python ./code/train_ss_3d.py --labelnum 4 --gpu 0
 ```
 cd MC-Net
 # e.g., for 5% labels on LA
-python ./code/test_LA.py --labelnum 4 --gpu 0
+python ./code/test_LA.py --labelnum 4
 ```
 
 ### Citation
