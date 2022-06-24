@@ -112,34 +112,6 @@ class Decoder(nn.Module):
         x_last = self.up4(x, x0)
         output = self.out_conv(x_last)
         return output, x_last
-
-def Dropout(x, p=0.5):
-    x = torch.nn.functional.dropout2d(x, p)
-    return x
-
-def FeatureDropout(x):
-    attention = torch.mean(x, dim=1, keepdim=True)
-    max_val, _ = torch.max(attention.view(x.size(0), -1), dim=1, keepdim=True)
-    threshold = max_val * np.random.uniform(0.7, 0.9)
-    threshold = threshold.view(x.size(0), 1, 1, 1).expand_as(attention)
-    drop_mask = (attention < threshold).float()
-    x = x.mul(drop_mask)
-    return x
-
-    
-class FeatureNoise(nn.Module):
-    def __init__(self, uniform_range=0.3):
-        super(FeatureNoise, self).__init__()
-        self.uni_dist = Uniform(-uniform_range, uniform_range)
-
-    def feature_based_noise(self, x):
-        noise_vector = self.uni_dist.sample(x.shape[1:]).to(x.device).unsqueeze(0)
-        x_noise = x.mul(noise_vector) + x
-        return x_noise
-
-    def forward(self, x):
-        x = self.feature_based_noise(x)
-        return x
     
 class UNet(nn.Module):
     def __init__(self, in_chns, class_num):
