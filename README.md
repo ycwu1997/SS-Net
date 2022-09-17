@@ -41,7 +41,8 @@ If our SS-Net model is useful for your research, please consider citing:
         title={Exploring Smoothness and Class-Separation for Semi-supervised Medical Image Segmentation},
         author={Wu, Yicheng and Wu, Zhonghua and Wu, Qianyi and Ge, Zongyuan and Cai, Jianfei},
         booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-        pages={--},
+        pages={34--43},
+        volume={13435},
         year={2022},
         organization={Springer}
         }
