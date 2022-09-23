@@ -9,7 +9,7 @@ by Yicheng Wu*, Zhonghua Wu, Qianyi Wu, Zongyuan Ge, and Jianfei Cai.
 <09.06.2022> We released the codes;
 ```
 ### Introduction
-This repository is for our MICCAI 2022 paper: '[Exploring Smoothness and Class-Separation for Semi-supervised Medical Image Segmentation](https://arxiv.org/pdf/2203.01324.pdf)'.
+This repository is for our MICCAI 2022 paper: '[Exploring Smoothness and Class-Separation for Semi-supervised Medical Image Segmentation](https://doi.org/10.1016/j.media.2022.102530)'.
 
 ### Requirements
 This repository is based on PyTorch 1.8.0, CUDA 11.1 and Python 3.8.10. All experiments in our paper were conducted on a single NVIDIA Tesla V100 GPU with an identical experimental setting.
