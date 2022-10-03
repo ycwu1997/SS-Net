@@ -43,8 +43,9 @@ If our SS-Net model is useful for your research, please consider citing:
         booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
         pages={34--43},
         volume={13435},
-        year={2022},
-        organization={Springer}
+        year={2022},    
+        doi={10.1007/978-3-031-16443-9\_4},
+        organization={Springer, Cham}
         }
 
 ### Acknowledgements:
