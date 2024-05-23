@@ -139,7 +139,7 @@ class UNet(nn.Module):
             nn.ReLU(inplace=True),
             nn.Linear(feat_dim, feat_dim)
         )
-        for class_c in range(4):
+        for class_c in range(class_num):
             selector = nn.Sequential(
                 nn.Linear(feat_dim, feat_dim),
                 nn.BatchNorm1d(feat_dim),
@@ -148,7 +148,7 @@ class UNet(nn.Module):
             )
             self.__setattr__('contrastive_class_selector_' + str(class_c), selector)
 
-        for class_c in range(4):
+        for class_c in range(class_num):
             selector = nn.Sequential(
                 nn.Linear(feat_dim, feat_dim),
                 nn.BatchNorm1d(feat_dim),
