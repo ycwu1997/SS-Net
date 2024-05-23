@@ -256,7 +256,7 @@ class VNet(nn.Module):
             nn.ReLU(inplace=True),
             nn.Linear(feat_dim, feat_dim)
         )
-        for class_c in range(2):
+        for class_c in range(n_classes):
             selector = nn.Sequential(
                 nn.Linear(feat_dim, feat_dim),
                 nn.BatchNorm1d(feat_dim),
@@ -265,7 +265,7 @@ class VNet(nn.Module):
             )
             self.__setattr__('contrastive_class_selector_' + str(class_c), selector)
 
-        for class_c in range(2):
+        for class_c in range(n_classes):
             selector = nn.Sequential(
                 nn.Linear(feat_dim, feat_dim),
                 nn.BatchNorm1d(feat_dim),
